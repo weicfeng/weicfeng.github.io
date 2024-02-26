@@ -14,7 +14,7 @@ function start() {
   logStateChange("Started");
   const videoTag = document.getElementById('video');
   logStateChange(videoTag.outerHTML);
-  navigator.mediaDevices.getUserMedia({video:{width: 1280, height:720}, audio : true,})
+  navigator.mediaDevices.getUserMedia({video:true, audio : true,})
       .then((streams) => {
         logStateChange("Got streams");
         logStateChange(streams);
