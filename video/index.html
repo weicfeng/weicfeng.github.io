@@ -14,7 +14,7 @@ function start() {
   logStateChange("Started");
   const videoTag = document.getElementById('video');
   logStateChange(videoTag.outerHTML);
-  navigator.mediaDevices.getUserMedia({video:{"width":{"ideal":1280},"height":{"ideal":720},"advanced":[{"frameRate":{"min":30}},{"height":{"min":720}},{"width":{"min":1280}},{"frameRate":{"max":30}},{"width":{"max":1280}},{"height":{"max":720}},{"aspectRatio":{"exact":1.7777777777777777}}]}, audio : true,})
+  navigator.mediaDevices.getUserMedia({video:{"width":1280,"height":720}, audio : true,})
       .then((streams) => {
         logStateChange("Got streams");
         logStateChange(streams);
